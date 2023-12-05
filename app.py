@@ -11,9 +11,14 @@ app = Flask(__name__)
 
 # Establish connection to MongoDB
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-admin_collection = client['your_database']['admin']
-business_collection = client['your_database']['business']
-review_collection = client['your_database']['review']
+
+db = client['yelp']  
+
+# Access the collections
+review_collection = db['review']
+user_collection = db['user']
+business_collection = db['business']
+admin_collection = db['admin']
 
 # Establish connection to Redis using Docker container host
 redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
