@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Yelp Review System</title>
+</head>
+<body>
+    <h1>Welcome to Yelp Review System</h1>
+    <form action="/add_review/" method="post">
+        <label for="user_name">User Name:</label>
+        <input type="text" name="user_name" required><br>
+        <label for="business_name">Business Name:</label>
+        <input type="text" name="business_name" required><br>
+        <label for="business_address">Business Address:</label>
+        <input type="text" name="business_address" required><br>
+        <label for="business_city">Business City:</label>
+        <input type="text" name="business_city" required><br>
+        <label for="stars">Stars:</label>
+        <input type="number" name="stars" required><br>
+        <label for="useful">Useful:</label>
+        <input type="number" name="useful" required><br>
+        <label for="funny">Funny:</label>
+        <input type="number" name="funny" required><br>
+        <label for="cool">Cool:</label>
+        <input type="number" name="cool" required><br>
+        <label for="text">Comment:</label>
+        <textarea name="text" required></textarea><br>
+        <input type="submit" value="Submit Review">
+    </form>
+</body>
+</html>
